@@ -12,14 +12,7 @@ from fpdf import FPDF
 # --- CONFIGURATION DE LA PAGE ---
 st.set_page_config(
     page_title="ASSIA",
-    page_icon="logo_assia.png",  # Utilise ton logo en PNG ici
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
-st.set_page_config(
-    page_title="ASSIA",
-    page_icon="🩺",
+    page_icon="logo_assia.png", 
     layout="wide",
     initial_sidebar_state="expanded"
 )
