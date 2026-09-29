@@ -67,7 +67,7 @@ def obtenir_gif_base64(nom_fichier="loading.gif"):
             pass
     return None
 
-def obtenir_logo_base64(nom_fichier="icone_detoure.png"):
+def obtenir_logo_base64(nom_fichier="lolo_assia.jpg"):
     """Convertit l'image du logo local en chaîne base64 pour un affichage HTML garanti."""
     chemin_img = os.path.join(REPERTOIRE_SCRIPT, nom_fichier)
     if os.path.exists(chemin_img):
@@ -655,7 +655,7 @@ def generer_avec_memoire_chat(instruction_filtre, modele_prefere, cles, historiq
     raise derniere_erreur if derniere_erreur else Exception("Impossible de générer le contenu après épuisement des clés.")
 
 # --- REMPLACEMENT TOTAL DU BANDEAU PAR LE LOGO ---
-logo_b64 = obtenir_logo_base64("icone_detoure.png")
+logo_b64 = obtenir_logo_base64("logo_assia.jpg")
 
 if logo_b64:
     st.markdown(f"""
