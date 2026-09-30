@@ -729,7 +729,7 @@ logo_b64 = obtenir_logo_base64("logo_assia.png")
 if logo_b64:
     st.markdown(f"""
     <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1.5rem; margin-top: 0.5rem;">
-        <img src="data:image/png;base64,{logo_b64}" style="width: 512px; height: 512px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 24px rgba(9, 60, 57, 0.25); border: 4px solid #093c39;" />
+        <img src="data:image/png;base64,{logo_b64}" style="width: 350px; height: 350px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 24px rgba(9, 60, 57, 0.25); border: 4px solid #093c39;" />
     </div>
     """, unsafe_allow_html=True)
 else:
