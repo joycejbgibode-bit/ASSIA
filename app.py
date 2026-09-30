@@ -468,6 +468,15 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+    /* Réduction de la marge supérieure par défaut de Streamlit */
+    .main .block-container {
+        max-width: 98% !important;
+        padding-top: 1rem !important; /* Réduit l'espace vide tout en haut */
+        padding-bottom: 1.5rem !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
 # --- CHARGEMENT DU DOSSIER DE DOCUMENTS ---
 @st.cache_resource
 def charger_connaissances(racine):
