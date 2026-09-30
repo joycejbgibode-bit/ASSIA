@@ -84,7 +84,7 @@ if not st.session_state.app_charge:
             </style>
 
             <div class="splash-overlay">
-                <video width="750" autoplay muted playsinline webkit-playsinline preload="auto" style="border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                <video width="600" autoplay muted playsinline webkit-playsinline preload="auto" style="border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
                     <source src="data:video/mp4;base64,{video_b64}" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
