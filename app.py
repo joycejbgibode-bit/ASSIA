@@ -240,15 +240,21 @@ def afficher_contenu_complet(texte, images, est_rappel_complet):
         with col_images:
             st.markdown('<div class="schemas-panel-title">🖼️ Illustration & Schéma</div>', unsafe_allow_html=True)
             for img in liste_img:
-                if isinstance(img, dict) and "fichier" in img and os.path.exists(img["fichier"]):
-                    st.image(img["fichier"], caption=f"{img.get('titre', '')}", use_container_width=True)
+                if isinstance(img, dict) and "fichier" in img:
+                    if os.path.exists(img["fichier"]):
+                        st.image(img["fichier"], caption=f"{img.get('titre', '')}", use_container_width=True)
+                    else:
+                        st.error(f"⚠️ Fichier image introuvable sur le serveur : {img['fichier']}")
     else:
         st.markdown(texte)
         if liste_img:
             st.write("---")
             for img in liste_img:
-                if isinstance(img, dict) and "fichier" in img and os.path.exists(img["fichier"]):
-                    st.image(img["fichier"], caption=f"🖼️ {img.get('titre', '')}", use_container_width=True)
+                if isinstance(img, dict) and "fichier" in img:
+                    if os.path.exists(img["fichier"]):
+                        st.image(img["fichier"], caption=f"🖼️ {img.get('titre', '')}", use_container_width=True)
+                    else:
+                        st.error(f"⚠️ Fichier image introuvable sur le serveur : {img['fichier']}")
 
 # --- FEUILLE DE STYLE UI MÉDICALE ---
 st.markdown("""
