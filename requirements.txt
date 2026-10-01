@@ -2,3 +2,4 @@ streamlit
 google-genai
 pypdf
 fpdf
+streamlit-mic-recorder
